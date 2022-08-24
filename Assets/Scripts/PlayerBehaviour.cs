@@ -33,6 +33,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnDestroy()
     {
         CoinHolderBehaviour.Instance.levelCounter++;
+        CoinHolderBehaviour.Instance.playerTotalScore += ScoreManagement.instance.GetTotalScore();
     }
 
     ///Vector3 tempVect;
@@ -41,7 +42,9 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        ScoreManagement.instance.simpleCoinScore(CoinHolderBehaviour.Instance.playerTotalScore);
+
         //Instance = this;
         speed = 2f;
         playerRigidBody = GetComponent<Rigidbody2D>();

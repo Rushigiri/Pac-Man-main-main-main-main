@@ -28,4 +28,9 @@ public class ScoreManagement : MonoBehaviour
         score += totalScore;
         text.text = score.ToString();
     }
+
+    public int GetTotalScore()
+    {
+        return score;
+    }
 }

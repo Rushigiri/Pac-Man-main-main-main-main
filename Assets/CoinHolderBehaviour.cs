@@ -12,12 +12,16 @@ public class CoinHolderBehaviour : MonoBehaviour
     {
         Instance = this;
     }
-    
+
+    public int playerTotalScore;
+
     public int levelCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        playerTotalScore = 0;
 
         levelCounter = 0;
 
