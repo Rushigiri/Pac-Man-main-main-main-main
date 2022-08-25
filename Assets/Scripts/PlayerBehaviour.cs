@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     float horizontal;
     float vertical;
+    public SpriteRenderer playerSprite;
     public Rigidbody2D playerRigidBody;
     public float speed;
     public bool isPowerOn = false;
@@ -83,12 +84,12 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (startTime >= endTime)
         {
-
+            playerSprite.color = Color.yellow;
             speed = 2f;
             //player.GetComponent<PlayerBehaviour>().speed = 2f;
             //currentSpeed = 2f;
             startTime = 0f;
-            endTime = 8f;
+            endTime = 5f;
             Debug.Log(isPowerOn);
             isPowerOn = false;
             // player.tag = "Player";
@@ -150,6 +151,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if ((collision.gameObject.tag == "Enemy") && isPowerOn)
         {
+           
             ScoreManagement.instance.simpleCoinScore(200);
             Destroy(collision.gameObject);
             int enemyNum = Random.Range(0, enemy.Length);
@@ -157,7 +159,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Enemy")
         {
-
+            //CoinHolderBehaviour.Instance.playerTotalScore = 0;
             Destroy(gameObject);
             GameOverCanvas.SetActive(true);
         }

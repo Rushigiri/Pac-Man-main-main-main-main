@@ -7,7 +7,7 @@ public class ScoreManagement : MonoBehaviour
 {
     public static ScoreManagement instance;
     public TextMeshProUGUI text;
-    int score;
+    public int score;
 
     private void Awake()
     {
@@ -26,6 +26,7 @@ public class ScoreManagement : MonoBehaviour
     public void simpleCoinScore(int totalScore)
     {
         score += totalScore;
+
         text.text = score.ToString();
     }
 

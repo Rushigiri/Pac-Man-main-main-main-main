@@ -28,6 +28,7 @@ public class PowerUp : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") && !PlayerBehaviour.Instance.isPowerOn)
         {
+            PlayerBehaviour.Instance.playerSprite.color = Color.red;
             ScoreManagement.instance.simpleCoinScore(totalScore);
             PlayerBehaviour.Instance.isPowerOn = true;
             Debug.Log(PlayerBehaviour.Instance.isPowerOn);

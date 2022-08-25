@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.9173881}
   m_AnchorMax: {x: 1, y: 0.9517762}
-  m_AnchoredPosition: {x: -137.7, y: -120}
+  m_AnchoredPosition: {x: -137.70001, y: -120}
   m_SizeDelta: {x: -880, y: 8.681885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27938598
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &106605485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &106937960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &119217203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,6 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &122800242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,6 +1143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &150831915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,6 +1498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &167225798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &179040626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,6 +1856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &237069293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,6 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &262666465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2249,6 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &278684513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,6 +2530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &301018804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,6 +2929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &345000653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,6 +3201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &443613678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3757,6 +3770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &485396332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3868,6 +3882,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsforEachLevel: 
+  playerTotalScore: 0
+  levelCounter: 0
 --- !u!4 &486704551
 Transform:
   m_ObjectHideFlags: 0
@@ -3931,6 +3947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &505670870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4203,6 +4220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &508661013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4337,7 +4355,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4454,6 +4472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &531233770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4583,6 +4602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &531808583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4823,6 +4843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &567607582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5418,6 +5439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &625702591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5991,6 +6013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &657949710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6089,7 +6112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &664936123
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6157,8 +6180,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 407.9
-  m_fontSizeBase: 407.9
+  m_fontSize: 260
+  m_fontSizeBase: 260
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6193,7 +6216,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -32.59137, y: 0, z: -58.198578, w: -44.230904}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6360,7 +6383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &696174240
 Transform:
   m_ObjectHideFlags: 0
@@ -6467,6 +6490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &709076042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6596,6 +6620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &710706861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6836,6 +6861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &734862601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6965,6 +6991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &739917481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7312,6 +7339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &763227148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7441,6 +7469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &783753051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7570,6 +7599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &791172898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7699,6 +7729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &796389303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8162,6 +8193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &856695704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8291,6 +8323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &865132693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8531,6 +8564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &886670351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8691,6 +8725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &913260279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8851,6 +8886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &917190812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8980,6 +9016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &922884078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9230,6 +9267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &942642880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10152,6 +10190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1015828276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10281,6 +10320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1106028661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10410,6 +10450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1112657683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10559,8 +10600,8 @@ Canvas:
   m_GameObject: {fileID: 1116736946}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -10641,6 +10682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1188705426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10912,6 +10954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1234017388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11287,6 +11330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1295520461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11900,6 +11944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1360966173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12029,6 +12074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1362497200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12158,6 +12204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1377533019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12422,6 +12469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1400529181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12551,6 +12599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1406511184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12711,6 +12760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1416694289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12979,6 +13029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1447704553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13219,6 +13270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1456910532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13691,6 +13743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1494667750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13854,7 +13907,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1500556898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1880392458}
+        m_TargetAssemblyTypeName: uiManage, Assembly-CSharp
+        m_MethodName: GotoHomePage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1500556898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13941,6 +14006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1507909906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14070,6 +14136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1523188881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14199,6 +14266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1541146351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14634,6 +14702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1599184883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14763,6 +14832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1616300031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14892,6 +14962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1618959741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15581,6 +15652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1678571774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15856,6 +15928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1738811674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15970,6 +16043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0628003a283494f0e8fbe34834747d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 1753096034}
   playerRigidBody: {fileID: 0}
   speed: 0
   isPowerOn: 0
@@ -16100,7 +16174,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 16328b16158fc4620b6e63890529c87a, type: 3}
-  m_Color: {r: 1, g: 0.8089572, b: 0, a: 1}
+  m_Color: {r: 0.91039276, g: 1, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -16230,6 +16304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1753561306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16581,6 +16656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1804428356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16710,6 +16786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1817690495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16815,7 +16892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830977044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.25, y: 1.4, z: 0.74}
+  m_LocalPosition: {x: 2.21, y: 1.65, z: 0.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17015,7 +17092,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1846553608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1880392458}
+        m_TargetAssemblyTypeName: uiManage, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1846553608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17133,6 +17222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1856955672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17223,6 +17313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880392457}
+  - component: {fileID: 1880392458}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -17252,6 +17343,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.0015869}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1880392458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880392456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d107122197b1a4babb27e95cef9b4fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i: 1
 --- !u!1 &1881950525
 GameObject:
   m_ObjectHideFlags: 0
@@ -17411,6 +17515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1907448489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17492,6 +17597,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1908845116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908845118}
+  - component: {fileID: 1908845117}
+  m_Layer: 0
+  m_Name: GameOverScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1908845117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908845116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edec754aa047141cf840f629a875251c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 664936124}
+--- !u!4 &1908845118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908845116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2708054, y: -0.6636464, z: -0.09335829}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927390166
 GameObject:
   m_ObjectHideFlags: 0
@@ -17843,6 +17993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!1 &1943763068
 GameObject:
   m_ObjectHideFlags: 0
@@ -17891,6 +18042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1943763071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18020,6 +18172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &1971230217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18180,6 +18333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2007426245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18450,7 +18604,7 @@ Transform:
   m_GameObject: {fileID: 2021046269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.5, y: -2.2665, z: 0}
-  m_LocalScale: {x: 6.9709997, y: 12.266999, z: 1}
+  m_LocalScale: {x: 6.9709997, y: 15.487087, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -18639,6 +18793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2026978227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19048,6 +19203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2064453431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19208,6 +19364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2077885267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19481,6 +19638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2100523488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19641,6 +19799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2114725992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19770,6 +19929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2115478422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19899,6 +20059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2122801486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20277,6 +20438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 27938598}
+  score: 0
 --- !u!114 &2135121671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24010,7 +24172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8289809305031045079
 Transform:
   m_ObjectHideFlags: 0
