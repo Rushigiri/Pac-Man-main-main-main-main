@@ -21,12 +21,12 @@ public class CoinHolderBehaviour : MonoBehaviour
     void Start()
     {
 
-        playerTotalScore = 0;
+        // playerTotalScore = 0;
 
-        levelCounter = 0;
+        //levelCounter = 0;
 
-        coinsforEachLevel = new List<int>() { 76, 102, 125, 142, 166 };
-        DontDestroyOnLoad(gameObject);    
+        //coinsforEachLevel = new List<int>() { 76, 102, 125, 142, 166 };
+        //DontDestroyOnLoad(gameObject);    
     }
 
     

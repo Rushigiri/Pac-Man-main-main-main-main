@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    float horizontal;
-    float vertical;
     public SpriteRenderer playerSprite;
     public Rigidbody2D playerRigidBody;
     public float speed;
@@ -20,7 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
     public List<GameObject> coins;
     public int i;
     public GameObject GameOverCanvas;
-
+    Vector2 moveDir;
     bool newSceneLoaded;
 
     public static PlayerBehaviour Instance;
@@ -31,20 +29,20 @@ public class PlayerBehaviour : MonoBehaviour
        
     }
 
-    private void OnDestroy()
-    {
-        CoinHolderBehaviour.Instance.levelCounter++;
-        CoinHolderBehaviour.Instance.playerTotalScore += ScoreManagement.instance.GetTotalScore();
-    }
+    //private void OnDestroy()
+    //{
+    //    CoinHolderBehaviour.Instance.levelCounter++;
+    //    CoinHolderBehaviour.Instance.playerTotalScore += ScoreManagement.instance.GetTotalScore();
+    //}
 
     ///Vector3 tempVect;
-    Vector2 moveDir;
+    
 
     // Start is called before the first frame update
     void Start()
     {
 
-        ScoreManagement.instance.simpleCoinScore(CoinHolderBehaviour.Instance.playerTotalScore);
+        //ScoreManagement.instance.simpleCoinScore(CoinHolderBehaviour.Instance.playerTotalScore);
 
         //Instance = this;
         speed = 2f;
@@ -62,13 +60,9 @@ public class PlayerBehaviour : MonoBehaviour
         
         
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            
+        
 
-        }
-
-        //for spwan player one side to other side
+        // spwan player one side to other side
         if (transform.position.x > 6)
         {
             transform.position = new Vector3(-7.3f, transform.position.y, transform.position.z);
@@ -90,7 +84,7 @@ public class PlayerBehaviour : MonoBehaviour
             //currentSpeed = 2f;
             startTime = 0f;
             endTime = 5f;
-            Debug.Log(isPowerOn);
+            //Debug.Log(isPowerOn);
             isPowerOn = false;
             // player.tag = "Player";
         }
@@ -101,11 +95,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 SceneManager.LoadScene(CoinHolderBehaviour.Instance.levelCounter+2);
 
-                Debug.Log("coins Count: " + coinCount);
-                
-                //i++;
-
-                
+                Debug.Log("coins Count: " + coinCount);                
                 //Debug.Log(i);
                 newSceneLoaded = true;
             }
@@ -113,22 +103,22 @@ public class PlayerBehaviour : MonoBehaviour
            
            
         }
-        if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            moveDir = Vector2.right;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            moveDir = Vector2.left;
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            moveDir = Vector2.up;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            moveDir = Vector2.down;
-        }
+        //if(Input.GetKeyDown(KeyCode.RightArrow))          
+        //{
+        //    moveDir = Vector2.right;
+        //}
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    moveDir = Vector2.left;
+        //}
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //{
+        //    moveDir = Vector2.up;
+        //}
+        //if (Input.GetKeyDown(KeyCode.DownArrow))
+        //{
+        //    moveDir = Vector2.down;
+        //}
 
     }
 
@@ -140,8 +130,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Move()
     {
-
-
          playerRigidBody.MovePosition(playerRigidBody.position + (moveDir * speed * Time.deltaTime));
     }
 
@@ -170,7 +158,6 @@ public class PlayerBehaviour : MonoBehaviour
         moveDir = Vector2.up;
         transform.rotation = Quaternion.Euler(new Vector3(0,0,90));
         transform.localScale = new Vector3(-1, 1, 1);
-
     }
 
     public void MoveDown()
@@ -178,7 +165,6 @@ public class PlayerBehaviour : MonoBehaviour
         moveDir = Vector2.down;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
         transform.localScale = new Vector3(-1, 1, 1);
-
     }
 
     public void MoveRight()
@@ -193,7 +179,6 @@ public class PlayerBehaviour : MonoBehaviour
         moveDir = Vector2.left;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         transform.localScale = new Vector3(1,1,1);
-
     }
 
 }

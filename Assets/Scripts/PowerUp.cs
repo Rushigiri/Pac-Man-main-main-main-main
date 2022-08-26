@@ -5,8 +5,8 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
 
-    int totalScore = 100;
-    int endTime = 8;
+    int totalScore = 20;
+    int endTime = 5;
     int startTime = 0;
     void Update()
     {
@@ -31,8 +31,8 @@ public class PowerUp : MonoBehaviour
             PlayerBehaviour.Instance.playerSprite.color = Color.red;
             ScoreManagement.instance.simpleCoinScore(totalScore);
             PlayerBehaviour.Instance.isPowerOn = true;
-            Debug.Log(PlayerBehaviour.Instance.isPowerOn);
-            PlayerBehaviour.Instance.speed = 3f;
+            //Debug.Log(PlayerBehaviour.Instance.isPowerOn);
+            PlayerBehaviour.Instance.speed = 2.4f;
             PlayerBehaviour.Instance.startTime = startTime;
             PlayerBehaviour.Instance.endTime = endTime;
             gameObject.SetActive(false);
