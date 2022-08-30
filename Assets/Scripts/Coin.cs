@@ -13,10 +13,8 @@ public class Coin : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-          
-
-            PlayerBehaviour.Instance.coinCount -- ;
-            Debug.Log(PlayerBehaviour.Instance.coins.Count);
+            //PlayerBehaviour.Instance. -- ;
+            //Debug.Log(PlayerBehaviour.Instance.coins.Count);
             ScoreManagement.instance.simpleCoinScore(totalScore);
             Destroy(gameObject);
         }

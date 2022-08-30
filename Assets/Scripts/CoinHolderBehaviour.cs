@@ -4,36 +4,38 @@ using UnityEngine;
 
 public class CoinHolderBehaviour : MonoBehaviour
 {
-    public List<int> coinsforEachLevel;
 
-    public static CoinHolderBehaviour Instance;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+    //public List<int> coinsforEachLevel;
 
-    public int playerTotalScore;
+    //public static CoinHolderBehaviour Instance;
 
-    public int levelCounter;
+    //private void Awake()
+    //{
+    //    Instance = this;
+    //}
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    ////public int playerTotalScore;
 
-        // playerTotalScore = 0;
+    //public int levelCounter;
 
-        //levelCounter = 0;
+    //// Start is called before the first frame update
+    //void Start()
+    //{
 
-        //coinsforEachLevel = new List<int>() { 76, 102, 125, 142, 166 };
-        //DontDestroyOnLoad(gameObject);    
-    }
+    //    // playerTotalScore = 0;
+
+    //    //levelCounter = 0;
+
+    //    //coinsforEachLevel = new List<int>() { 76, 102, 125, 142, 166 };
+    //    //DontDestroyOnLoad(gameObject);    
+    //}
 
     
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
+    //}
 }

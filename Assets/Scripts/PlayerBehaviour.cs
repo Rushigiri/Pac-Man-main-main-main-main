@@ -12,7 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
     public bool isPowerOn = false;
    public float startTime = 0f;
    public float endTime = 8f;
-    public float coinCount;
+    //public float coinCount;
+    public GameObject coinParent;
     public Transform spawnPoint;
     public GameObject[] enemy;
     public List<GameObject> coins;
@@ -25,8 +26,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Awake()
     {
-       Instance = this;
        
+            Instance = this;
+        
+
     }
 
     //private void OnDestroy()
@@ -41,26 +44,27 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //ScoreManagement.instance.simpleCoinScore(CoinHolderBehaviour.Instance.playerTotalScore);
-
-        //Instance = this;
         speed = 2f;
         playerRigidBody = GetComponent<Rigidbody2D>();
         //coinCount = coins.Count;
-        coinCount = CoinHolderBehaviour.Instance.coinsforEachLevel[CoinHolderBehaviour.Instance.levelCounter];
+        //coinCount = CoinHolderBehaviour.Instance.coinsforEachLevel[CoinHolderBehaviour.Instance.levelCounter];
         newSceneLoaded = false;
-
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
 
-        
+
+
+        if (coinParent.transform.childCount == 0)
+        {
+            //SceneManager.LoadScene(0);
+            Debug.Log("ok");
+
+           uiManage.instance.LevelCompletePage();
+        }
 
         // spwan player one side to other side
         if (transform.position.x > 6)
@@ -80,47 +84,38 @@ public class PlayerBehaviour : MonoBehaviour
         {
             playerSprite.color = Color.yellow;
             speed = 2f;
-            //player.GetComponent<PlayerBehaviour>().speed = 2f;
-            //currentSpeed = 2f;
             startTime = 0f;
             endTime = 5f;
-            //Debug.Log(isPowerOn);
             isPowerOn = false;
-            // player.tag = "Player";
         }
-        if (coinCount <= 0)
-        {
-            //newSceneLoaded = false;
-            if(!newSceneLoaded)
-            {
-                SceneManager.LoadScene(CoinHolderBehaviour.Instance.levelCounter+2);
 
-                Debug.Log("coins Count: " + coinCount);                
-                //Debug.Log(i);
-                newSceneLoaded = true;
-            }
-            //method for game over
-           
-           
+        //Debug.Log(coinParent.transform.childCount);
+        
+
+
+            
+
+
+
+            //}
+            //if(Input.GetKeyDown(KeyCode.RightArrow))          
+            //{
+            //    moveDir = Vector2.right;
+            //}
+            //if (Input.GetKeyDown(KeyCode.LeftArrow))
+            //{
+            //    moveDir = Vector2.left;
+            //}
+            //if (Input.GetKeyDown(KeyCode.UpArrow))
+            //{
+            //    moveDir = Vector2.up;
+            //}
+            //if (Input.GetKeyDown(KeyCode.DownArrow))
+            //{
+            //    moveDir = Vector2.down;
+            //}
+
         }
-        //if(Input.GetKeyDown(KeyCode.RightArrow))          
-        //{
-        //    moveDir = Vector2.right;
-        //}
-        //if (Input.GetKeyDown(KeyCode.LeftArrow))
-        //{
-        //    moveDir = Vector2.left;
-        //}
-        //if (Input.GetKeyDown(KeyCode.UpArrow))
-        //{
-        //    moveDir = Vector2.up;
-        //}
-        //if (Input.GetKeyDown(KeyCode.DownArrow))
-        //{
-        //    moveDir = Vector2.down;
-        //}
-
-    }
 
     private void FixedUpdate()
     {
@@ -135,11 +130,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-      
-
         if ((collision.gameObject.tag == "Enemy") && isPowerOn)
-        {
-           
+        {          
             ScoreManagement.instance.simpleCoinScore(200);
             Destroy(collision.gameObject);
             int enemyNum = Random.Range(0, enemy.Length);

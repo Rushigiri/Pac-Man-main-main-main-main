@@ -8,13 +8,14 @@ public class ScoreManagement : MonoBehaviour
     public static ScoreManagement instance;
     public TextMeshProUGUI text;
     public int score;
+    public TextMeshProUGUI levelComText;
+    public TextMeshProUGUI gameOverText;
 
     private void Awake()
     {
-        if(instance == null)
-        {
+        
             instance = this;
-        }
+           
     }
 
     // Update is called once per frame
@@ -26,7 +27,8 @@ public class ScoreManagement : MonoBehaviour
     public void simpleCoinScore(int totalScore)
     {
         score += totalScore;
-
+        gameOverText.text = score.ToString();
+        levelComText.text = score.ToString();
         text.text = score.ToString();
     }
 

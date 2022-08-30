@@ -7,6 +7,17 @@ public class uiManage : MonoBehaviour
 {
    // public static bool GameIsPause = false;
     public GameObject pauseCanvas;
+    public GameObject LevelCompleteCanvas;
+    public GameObject gameOverCanvas;
+    public static uiManage instance;
+    public int nextLevelNum;
+    public int restartLevelNum;
+
+    private void Awake()
+    {
+        
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -41,13 +52,27 @@ public class uiManage : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1f;
-       CoinHolderBehaviour.Instance.playerTotalScore = 0;
+      // CoinHolderBehaviour.Instance.playerTotalScore = 0;
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(restartLevelNum);
     }
 
     public void GotoHomePage()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LevelCompletePage()
+    {
+        gameOverCanvas.SetActive(false);
+
+        LevelCompleteCanvas.SetActive(true);
+    }
+
+    public void NextLevelPage()
+    {
+
+        LevelCompleteCanvas.SetActive(false);
+        SceneManager.LoadScene(nextLevelNum);
     }
 }
