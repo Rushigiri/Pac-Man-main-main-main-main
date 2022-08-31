@@ -38,4 +38,9 @@ public class LevelCompleteManager : MonoBehaviour
     {
         SceneManager.LoadScene(6);
     }
+    public void GotoHomePage()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
+    }
 }
