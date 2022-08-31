@@ -59,7 +59,8 @@ public class uiManage : MonoBehaviour
 
     public void GotoHomePage()
     {
-        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
     }
 
     public void LevelCompletePage()
@@ -75,4 +76,6 @@ public class uiManage : MonoBehaviour
         LevelCompleteCanvas.SetActive(false);
         SceneManager.LoadScene(nextLevelNum);
     }
+
+    
 }

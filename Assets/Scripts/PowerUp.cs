@@ -20,27 +20,18 @@ public class PowerUp : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") && !PlayerBehaviour.Instance.isPowerOn)
         {
-            Debug.Log("1");
             PlayerBehaviour.Instance.playerSprite.color = Color.red;
-            Debug.Log("2");
 
             ScoreManagement.instance.simpleCoinScore(totalScore);
-            Debug.Log("3");
 
             PlayerBehaviour.Instance.isPowerOn = true;
-            Debug.Log("4");
-            //Debug.Log(PlayerBehaviour.Instance.isPowerOn);
 
             PlayerBehaviour.Instance.speed = 2.4f;
-            Debug.Log("5");
 
             PlayerBehaviour.Instance.startTime = startTime;
-            Debug.Log("6");
 
             PlayerBehaviour.Instance.endTime = endTime;
-            Debug.Log("7");
 
-            //gameObject.SetActive(false);
             Destroy(gameObject);
            
         }
