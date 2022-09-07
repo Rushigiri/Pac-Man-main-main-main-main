@@ -12,6 +12,7 @@ public class uiManage : MonoBehaviour
     public static uiManage instance;
     public int nextLevelNum;
     public int restartLevelNum;
+    public float waitTime = 1f;
 
     private void Awake()
     {
@@ -80,6 +81,14 @@ public class uiManage : MonoBehaviour
     public void BackPage()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public IEnumerator waitGameOverScreen(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+        gameOverCanvas.SetActive(true);
+
     }
 
     

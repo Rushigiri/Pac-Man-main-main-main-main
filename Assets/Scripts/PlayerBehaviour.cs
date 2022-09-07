@@ -12,6 +12,12 @@ public class PlayerBehaviour : MonoBehaviour
     public bool isPowerOn = false;
    public float startTime = 0f;
    public float endTime = 8f;
+    public GameObject destoryParticle;
+    public GameObject powerUpParticle;
+    public GameObject powerUpSpawnPosition;
+    //public ParticleSystem powerParticle;
+    //public ParticleSystem particle;
+    public float particleDestroyTime = 1f;
     //public float coinCount;
     public GameObject coinParent;
     public Transform spawnPoint;
@@ -32,15 +38,6 @@ public class PlayerBehaviour : MonoBehaviour
         
 
     }
-
-    //private void OnDestroy()
-    //{
-    //    CoinHolderBehaviour.Instance.levelCounter++;
-    //    CoinHolderBehaviour.Instance.playerTotalScore += ScoreManagement.instance.GetTotalScore();
-    //}
-
-    ///Vector3 tempVect;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +60,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             //SceneManager.LoadScene(0);
             Debug.Log("ok");
-
+           
            uiManage.instance.LevelCompletePage();
         }
 
@@ -78,6 +75,10 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (isPowerOn)
         {
+            //powerParticle.Play();
+            //Destroy(powerParticle, 5f);
+            GameObject power = Instantiate(powerUpParticle, powerUpSpawnPosition.transform.position, Quaternion.identity);
+            Destroy(power, 0.1f);
             startTime += Time.deltaTime;
         }
 
@@ -90,45 +91,12 @@ public class PlayerBehaviour : MonoBehaviour
             isPowerOn = false;
         }
 
-        //Debug.Log(coinParent.transform.childCount);
-        
-
-
-            
-
-
-
-            //}
-            //if(Input.GetKeyDown(KeyCode.RightArrow))          
-            //{
-            //    moveDir = Vector2.right;
-            //}
-            //if (Input.GetKeyDown(KeyCode.LeftArrow))
-            //{
-            //    moveDir = Vector2.left;
-            //}
-            //if (Input.GetKeyDown(KeyCode.UpArrow))
-            //{
-            //    moveDir = Vector2.up;
-            //}
-            //if (Input.GetKeyDown(KeyCode.DownArrow))
-            //{
-            //    moveDir = Vector2.down;
-            //}
-
         }
 
     private void FixedUpdate()
     {
         Move();
     }
-
-
-    public void Move()
-    {
-         playerRigidBody.MovePosition(playerRigidBody.position + (moveDir * speed * Time.deltaTime));
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.tag == "Enemy") && isPowerOn)
@@ -140,64 +108,113 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Enemy")
         {
-            //CoinHolderBehaviour.Instance.playerTotalScore = 0;
             Destroy(gameObject);
-            GameOverCanvas.SetActive(true);
+            GameObject blast = Instantiate(destoryParticle, transform.position, Quaternion.identity);
+            Destroy(blast, 1f);
+            // StartCoroutine(uiManage.instance.waitGameOverScreen(1));
+            uiManage.instance.StartCoroutine(uiManage.instance.waitGameOverScreen(1));
         }
+    }
+
+
+    //player MoveMent
+    public void Move()
+    {
+        playerRigidBody.MovePosition(playerRigidBody.position + (moveDir * speed * Time.deltaTime));
     }
 
     public void MoveUp()
     {
         if(!Physics2D.Linecast(transform.position,(Vector2)transform.position + new Vector2(0,1),levelcolide))
         {
-            Debug.Log((transform.position, (Vector2)transform.position + new Vector2(0, 1)));
+            Debug.DrawLine(transform.position, (Vector2)transform.position + new Vector2(0, 1));
             moveDir = Vector2.up;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
             transform.localScale = new Vector3(-1, 1, 1);
-        }
-        
+        }        
     }
 
     public void MoveDown()
     {
         if (!Physics2D.Linecast(transform.position, (Vector2)transform.position + new Vector2(0, -1), levelcolide))
         {
+            Debug.DrawLine(transform.position, (Vector2)transform.position + new Vector2(0, -1));
+
             moveDir = Vector2.down;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
             transform.localScale = new Vector3(-1, 1, 1);
-        }
-        
+        }   
     }
 
     public void MoveRight()
     {
         if (!Physics2D.Linecast(transform.position, (Vector2)transform.position + new Vector2(1, 0), levelcolide))
         {
-         moveDir = Vector2.right;
+            Debug.DrawLine(transform.position, (Vector2)transform.position + new Vector2(1, 0));
+
+            moveDir = Vector2.right;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         transform.localScale = new Vector3(-1,1,1);
         }
-        
     }
 
     public void MoveLeft()
     {
         if (!Physics2D.Linecast(transform.position, (Vector2)transform.position + new Vector2(-1, 0), levelcolide))
         {
-        moveDir = Vector2.left;
+            Debug.DrawLine(transform.position, (Vector2)transform.position + new Vector2(-1, 0));
+
+            moveDir = Vector2.left;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         transform.localScale = new Vector3(1,1,1);
 
-        }
-
-         
+        }   
     }
+
+    //public void DestroyAnimation(ParticleSystem destroypart)
+    //{
+    //    destroypart = GetComponent<ParticleSystem>();
+    //    destroypart.Play();
+    //    //destroypart = destroypart.duration;
+    //    //Destroy(gameObject, destroypart.main.duration);
+    //    destroypart.Stop();
+    //}
 
 }
 
 
 
 
+
+//private void OnDestroy()
+//{
+//    CoinHolderBehaviour.Instance.levelCounter++;
+//    CoinHolderBehaviour.Instance.playerTotalScore += ScoreManagement.instance.GetTotalScore();
+//}
+
+///Vector3 tempVect;
+
+
+//Debug.Log(coinParent.transform.childCount);
+
+
+//}
+//if(Input.GetKeyDown(KeyCode.RightArrow))          
+//{
+//    moveDir = Vector2.right;
+//}
+//if (Input.GetKeyDown(KeyCode.LeftArrow))
+//{
+//    moveDir = Vector2.left;
+//}
+//if (Input.GetKeyDown(KeyCode.UpArrow))
+//{
+//    moveDir = Vector2.up;
+//}
+//if (Input.GetKeyDown(KeyCode.DownArrow))
+//{
+//    moveDir = Vector2.down;
+//}
 
 //if (Input.GetKeyDown(KeyCode.UpArrow))
 //{ 
