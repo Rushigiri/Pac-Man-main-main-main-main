@@ -65,16 +65,21 @@ public class uiManage : MonoBehaviour
 
     public void LevelCompletePage()
     {
+        Time.timeScale = 0f;
         gameOverCanvas.SetActive(false);
-
         LevelCompleteCanvas.SetActive(true);
     }
 
     public void NextLevelPage()
     {
-
+        Time.timeScale = 1f;
         LevelCompleteCanvas.SetActive(false);
         SceneManager.LoadScene(nextLevelNum);
+    }
+
+    public void BackPage()
+    {
+        SceneManager.LoadScene(0);
     }
 
     

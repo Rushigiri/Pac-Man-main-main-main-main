@@ -21,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject GameOverCanvas;
     Vector2 moveDir;
     bool newSceneLoaded;
+    public LayerMask levelcolide;
 
     public static PlayerBehaviour Instance;
 
@@ -147,30 +148,49 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void MoveUp()
     {
-        moveDir = Vector2.up;
-        transform.rotation = Quaternion.Euler(new Vector3(0,0,90));
-        transform.localScale = new Vector3(-1, 1, 1);
+        if(!Physics2D.Linecast(transform.position,(Vector2)transform.position + new Vector2(0,1),levelcolide))
+        {
+            Debug.Log((transform.position, (Vector2)transform.position + new Vector2(0, 1)));
+            moveDir = Vector2.up;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        
     }
 
     public void MoveDown()
     {
-        moveDir = Vector2.down;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
-        transform.localScale = new Vector3(-1, 1, 1);
+        if (!Physics2D.Linecast(transform.position, (Vector2)transform.position + new Vector2(0, -1), levelcolide))
+        {
+            moveDir = Vector2.down;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        
     }
 
     public void MoveRight()
     {
-        moveDir = Vector2.right;
+        if (!Physics2D.Linecast(transform.position, (Vector2)transform.position + new Vector2(1, 0), levelcolide))
+        {
+         moveDir = Vector2.right;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         transform.localScale = new Vector3(-1,1,1);
+        }
+        
     }
 
     public void MoveLeft()
     {
+        if (!Physics2D.Linecast(transform.position, (Vector2)transform.position + new Vector2(-1, 0), levelcolide))
+        {
         moveDir = Vector2.left;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         transform.localScale = new Vector3(1,1,1);
+
+        }
+
+         
     }
 
 }

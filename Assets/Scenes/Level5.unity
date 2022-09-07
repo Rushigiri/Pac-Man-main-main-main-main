@@ -11807,8 +11807,8 @@ MonoBehaviour:
   pauseCanvas: {fileID: 727439631992718833}
   LevelCompleteCanvas: {fileID: 1328145267}
   gameOverCanvas: {fileID: 4440348154466389662}
-  nextLevelNum: 6
-  restartLevelNum: 5
+  nextLevelNum: 7
+  restartLevelNum: 6
 --- !u!4 &929922043
 Transform:
   m_ObjectHideFlags: 0

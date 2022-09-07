@@ -12090,6 +12090,30 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 7052463217210653288, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052463217210653292, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052463217210653292, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052463217210653292, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052463217210653292, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052463217210653292, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7052463217429985944, guid: b70d3c5203cb7425d8a0abeb48374079, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -24588,8 +24612,8 @@ MonoBehaviour:
   pauseCanvas: {fileID: 1144831597}
   LevelCompleteCanvas: {fileID: 1144831596}
   gameOverCanvas: {fileID: 1995288573}
-  nextLevelNum: 3
-  restartLevelNum: 2
+  nextLevelNum: 4
+  restartLevelNum: 3
 --- !u!4 &5221196277258718505
 Transform:
   m_ObjectHideFlags: 0

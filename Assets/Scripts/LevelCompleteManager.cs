@@ -20,26 +20,32 @@ public class LevelCompleteManager : MonoBehaviour
 
     public void Level1()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(2);
     }
     public void Level2()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(3);
     }
     public void Level3()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(4);
     }
     public void Level4()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(5);
     }
     public void Level5()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(6);
     }
     public void GotoHomePage()
     {
+
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
